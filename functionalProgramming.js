@@ -1,3 +1,4 @@
+/*
 function add(a,b){
     return a+b;
 }
@@ -13,3 +14,15 @@ function manipolate(a,b,func){
 }
 var manipulate = manipolate(4,5,add);
 console.log(manipulate());
+*/
+//closure
+var x = 10;
+function myFun(){
+    console.log(x);
+    var b = 4;
+    return function(){
+        console.log(b);
+    }
+}
+var reslt = myFun()
+console.dir(reslt);
