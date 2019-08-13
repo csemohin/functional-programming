@@ -21,3 +21,16 @@ console.log(myFilter(arr, function(el){
     return el % 2 === 1;
 }));
 
+function delFilter(arrr, cb){
+    var newA = []
+    for(var i = 0; i < arrr.length; i++){
+        if(cb(arrr[i])){
+            newA.push(arrr[i])
+        }
+    }
+    return newA;
+}
+delFilter(arr, function(el){
+    console.log(el);
+    
+})
